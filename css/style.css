@@ -4,3 +4,67 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    height: 70px;
+    width: 1200px;
+    text-align: center;
+    background-color: red;
+    position: fixed;
+    z-index: 1;
+}
+
+header::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header .navigation-bar{
+    width: 70%;
+    margin: 20px auto 0;
+    align-items: center;
+}
+
+.navigation-bar .logo{
+    float: left;
+}
+
+.navigation-bar .login{
+    float: right;
+}
+
+.navigation-bar nav{
+    display: inline-block;
+    text-align: center;
+    width: 70%;
+}
+
+.navigation-bar nav ul{
+    list-style: none;
+}
+
+.navigation-bar nav ul li{
+    display: inline-block;
+    margin: 5px;
+}
+
+.navigation-bar a{
+    text-decoration: none;
+}
+
+.navigation-bar nav a{
+    color: white;    
+}
+
+.navigation-bar .login{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
