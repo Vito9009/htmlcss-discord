@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/whitney');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,39 +8,40 @@
 
 body{
     width: 1200px;
-    margin: 0 auto;
+    margin: auto;
+    font-family: "Whitney-Semibold";
 }
 
 header{
-    height: 70px;
-    width: 1200px;
-    text-align: center;
-    position: fixed;
-    z-index: 1;
+  height: 70px;
+  background-color: rgb(49, 97, 224);
+}
+
+a{
+  text-decoration: none;
 }
 
 .clearfix::after{
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
-header{
-    background-color: rgb(49, 97, 224);
+.logo{
+  float: left;
 }
 
-header .navigation-bar{
-    width: 70%;
-    margin: 20px auto 0;
-    align-items: center;
+.logo img{
+  height: 30px;
+  vertical-align: middle;
 }
 
-.navigation-bar .logo{
-    float: left;
+.menu{
+  float: left;
 }
 
-.navigation-bar .login{
-    float: right;
+.login{
+  float: right;
 }
 
 .navigation-bar nav{
@@ -47,32 +50,37 @@ header .navigation-bar{
     width: 70%;
 }
 
-.navigation-bar nav ul{
-    list-style: none;
+.navigation-bar ul li{
+  display: inline-block;
+  list-style: none;
+  padding: 0 15px;
 }
 
-.navigation-bar nav ul li{
-    display: inline-block;
-    margin: 5px;
+.navigation-bar ul li a{
+  color: rgb(255, 255, 255);
 }
 
-a{
-    text-decoration: none;
+.navigation-bar nav ul li a:hover{
+    text-decoration: underline;
 }
 
-.navigation-bar nav a{
-    color: white;    
-}
 
-.navigation-bar .login{
-    display: inline-block;
+.navigation-bar{
+  line-height: 70px;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .navigation-bar .login a{
-    background-color: white;
-    color: black;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 10px 15px;
     border-radius: 20px;
+}
+
+h1{
+  font-size: 50px;
+  padding-bottom: 20px;
 }
 
 #top-page{
@@ -91,7 +99,7 @@ a{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color: white;
+    color: rgb(255, 255, 255);
     margin: auto;
 }
 
@@ -104,9 +112,9 @@ a{
     margin: 15px 10px;
 }
 
-.button .download{
+.download{
     background-color: white;
-    color: black;
+    color: rgb(o, 0, 0);
     padding: 10px 20px;
     border-radius: 30px;
     height: 50px;
@@ -114,9 +122,14 @@ a{
     line-height: 50px;
 }
 
-.button .browser{
-    background-color: black;
-    color: white;
+.download-grey{
+  background-color: rgb(142, 161, 225);
+  color: rgb(255, 255, 255);
+}
+
+.browser{
+    background-color: rgb(35, 39, 42);
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     border-radius: 30px;
     height: 50px;
@@ -125,12 +138,29 @@ a{
 }
 
 .main-section{
-    width: 100%%;
-    height: 600px;
-    position: relative;
+  height: 500px;
+  width: 100%;
+  margin: auto;
+  position: relative;
 }
 
-.container{
+.box-left{
+  float:left;
+  height: 400px;
+  width: 400px;
+}
+
+.box-right{
+  float:right;
+  height: 400px;
+  width: 400px;
+}
+
+.main-section .section-container img{
+  width: 100%;
+}
+
+.main-section .section-container, .main-section .section-bottom{
   position: absolute;
   width: 70%;
   top: 50%;
@@ -138,29 +168,70 @@ a{
   transform: translate(-50%, -50%);
 }
 
-.picture-explain{
-  float: left;
-  width: 500px;
-  margin: 0 10px 10px 0;
-}
-
-.box-right{
-  margin-top: 3%;
-}
-
-
 .main-section .section-bottom{
     text-align: center;
+    margin-top: 10%;
+}
+
+.main-section.grey{
+  background-color: rgb(246, 246, 246);
+}
+
+h2{
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+main p{
+  font-size: 12px;
+}
+
+.text-of-main{
+  text-align: left;
+  padding-right: 150px;
+}
+
+h3{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h5{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.fas{
+  font-size: 15px;
+}
+
+h4{
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: rgb(114, 137, 218);
 }
 
 #bottom-page{
     background-image: url(../img/stars.svg);
     width: 100%;
-    height: 300px;
+    height: 200px;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     text-align: center;
+}
+
+.top-text-bottom{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.big-img-bottom{
+  height: 450px;
+}
+
+.big-img-bottom img{
+  height: 100%;
 }
 
 .text-bottom-page{
@@ -171,3 +242,91 @@ a{
     margin: auto;
 }
 
+footer{
+  height: 500px;
+  background-color: rgb(35, 39, 42);
+  margin-top: 250px;
+}
+
+.footer-container{
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 50px;
+  border-bottom: 1px solid rgb(114, 137, 218);
+}
+
+.info-footer{
+  float:left;
+  width: 30%;
+  height: 300px;
+}
+
+.footer-col{
+  float:left;
+  width: 17.5%;
+  height: 300px;
+}
+
+.footer-col li{
+  margin-bottom: 5px;
+}
+
+.footer-container ul li{
+  display: inline-block;
+  list-style: none;
+  padding: 0 20px;
+}
+
+.footer-container ul li a{
+  color: white;
+}
+
+.footer-container ul li a:hover{
+    color: rgb(114, 137, 218);
+}
+
+.column-title{
+  color: rgb(114, 137, 218);
+}
+
+.ita{
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255)
+}
+
+.ita img{
+  width: 18px;
+}
+
+.fas{
+  font-size: 15px;
+  padding-right: 5px;
+}
+
+.fab{
+  color: rgb(255, 255, 255);
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.fab:hover{
+  color: rgb(114, 137, 218);
+}
+
+
+.bottom-end{
+  line-height: 70px;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.bottom-end .login a{
+  background-color: rgb(142, 161, 225);
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.button-click:hover{
+  box-shadow: 2px 4px rgb(150, 226, 206);
+}
